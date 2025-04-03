@@ -16,7 +16,7 @@ GIT_PS1_SHOWUPSTREAM=auto
 
 # add kitao
 
-PS1='\[\e[32m\]coder\[\e[31m\]@kitao\[\e[34m\]:\w `if [ $(git rev-parse --git-dir 2> /dev/null) ]; then echo \($(git rev-parse --abbrev-ref HEAD)\); fi`\n\[\e[32m\]$\[\e[37m\] '
+PS1='\[\e[32m\]\u\[\e[37m\]@\[\e[31m\]\h\[\e[34m\]:\w\[\e[33m\]$(__git_ps1 " (%s)")\n\[\e[32m\]$\[\e[0m\] '
 alias dc='docker compose'
 alias dcu='docker compose up'
 alias dcd='docker compose down'
